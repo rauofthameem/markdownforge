@@ -16,7 +16,7 @@ async function cleanupTestArtifacts() {
     try {
       await fs.remove(dir);
       console.log(`✓ Cleaned up: ${dir}`);
-    } catch (error) {
+    } catch (_error) {
       // Ignore cleanup errors
     }
   }

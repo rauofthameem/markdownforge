@@ -203,7 +203,7 @@ class TempFileManager {
               const fileStats = await fs.stat(filePath);
               totalSize += fileStats.size;
             }
-          } catch (error) {
+          } catch (_error) {
             // Ignore individual file errors
           }
         }

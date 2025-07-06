@@ -67,6 +67,7 @@
     "puppeteer": "^24.11.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.30.1",
     "@types/jest": "^30.0.0",
     "eslint": "^9.30.1",
     "eslint-config-prettier": "^10.1.5",
@@ -133,27 +134,6 @@
     "setupFilesAfterEnv": [
       "<rootDir>/tests/setup.js"
     ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "plugin:node/recommended",
-      "plugin:jest/recommended",
-      "prettier"
-    ],
-    "env": {
-      "node": true,
-      "es2022": true,
-      "jest": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 2022,
-      "sourceType": "module"
-    },
-    "rules": {
-      "no-console": "off",
-      "node/no-unpublished-require": "off"
-    }
   },
   "prettier": {
     "semi": true,

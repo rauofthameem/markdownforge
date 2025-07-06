@@ -75,7 +75,7 @@ class DOCXConverter {
     return alignmentMap[alignmentString] || AlignmentType.LEFT;
   }
 
-  async convert(markdownPath, outputPath, originalMarkdownPath = null) {
+  async convert(markdownPath, outputPath) {
     try {
       logger.debug(`Converting ${markdownPath} to DOCX...`);
 

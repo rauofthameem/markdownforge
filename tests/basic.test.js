@@ -28,7 +28,7 @@ describe('FileConverter CLI Tests', () => {
     // Clean up after each test
     try {
       await fs.remove(testOutputDir);
-    } catch (error) {
+    } catch (_error) {
       // Ignore cleanup errors
     }
   });
@@ -205,7 +205,7 @@ async function checkDependencies() {
   try {
     const result = await checker.checkAll();
     return result.success;
-  } catch (error) {
+  } catch (_error) {
     return false;
   }
 }
