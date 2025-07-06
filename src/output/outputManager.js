@@ -35,14 +35,14 @@ class OutputManager {
     try {
       await fs.access(this.outputDir, fs.constants.W_OK);
       return true;
-    } catch (error) {
+    } catch (_error) {
       return false;
     }
   }
 
   async getAvailableSpace() {
     try {
-      const stats = await fs.stat(this.outputDir);
+      await fs.stat(this.outputDir);
       // This is a simplified check - in a real implementation,
       // you might want to use a library like 'check-disk-space'
       return {
@@ -222,7 +222,7 @@ class OutputManager {
     try {
       const files = await fs.readdir(this.outputDir);
       return files.length === 0;
-    } catch (error) {
+    } catch (_error) {
       return true; // If directory doesn't exist, consider it empty
     }
   }

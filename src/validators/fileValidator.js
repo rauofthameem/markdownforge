@@ -93,7 +93,7 @@ class FileValidator {
       // Check write permissions
       try {
         fs.accessSync(dir, fs.constants.W_OK);
-      } catch (error) {
+      } catch (_error) {
         errors.push(`No write permission for output directory: ${dir}`);
       }
       
