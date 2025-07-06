@@ -128,10 +128,6 @@ coverage/
 .fileconverterrc
 !.fileconverterrc.example
 
-# Package lock files (keep one)
-package-lock.json
-yarn.lock
-
 # Puppeteer downloads
 .local-chromium/
 
