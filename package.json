@@ -1,6 +1,6 @@
 {
   "name": "markdownforge",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Forge professional documents from Markdown with DOCX and PDF support, including Mermaid diagrams and admonitions",
   "main": "src/index.js",
   "bin": {
