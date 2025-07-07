@@ -70,7 +70,7 @@ class MermaidRenderer {
       await page.waitForFunction(() => window.mermaidRendered === true, { timeout: 15000 });
       
       // Wait a bit more for any animations to complete
-      await page.waitForTimeout(500);
+      await new Promise(resolve => setTimeout(resolve, 500));
       
       // Get the rendered diagram element
       const diagramElement = await page.$('#diagram-container');
