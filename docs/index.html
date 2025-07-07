@@ -48,6 +48,30 @@
       color: var(--theme-color);
     }
     
+    /* Custom cover page styling */
+    .cover.show {
+      background: linear-gradient(135deg, #f6f8fa 0%, #ffffff 50%, #f0f2f5 100%);
+    }
+    
+    .cover .cover-main {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      margin-right: 100px; /* Add margin to avoid GitHub corner overlap */
+    }
+    
+    /* Adjust GitHub corner for better positioning */
+    .github-corner {
+      z-index: 1000;
+    }
+    
+    /* Hide GitHub corner on cover page to avoid overlap */
+    .cover.show .github-corner {
+      display: none;
+    }
+    
     .github-corner:hover .octo-arm {
       animation: octocat-wave 560ms ease-in-out;
     }
