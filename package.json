@@ -19,7 +19,13 @@
     "format": "prettier --write src/ tests/ bin/",
     "build": "npm run lint && npm run test",
     "prepublishOnly": "npm run build",
-    "postinstall": "node scripts/check-dependencies.js"
+    "postinstall": "node scripts/check-dependencies.js",
+    "release:patch": "npm run release:prepare && npm version patch && git push origin main --tags",
+    "release:minor": "npm run release:prepare && npm version minor && git push origin main --tags",
+    "release:major": "npm run release:prepare && npm version major && git push origin main --tags",
+    "release:prepare": "node scripts/prepare-release.js",
+    "release:dry-run": "npm pack --dry-run",
+    "ci:local": "npm run lint && npm run test:coverage && npm run release:dry-run"
   },
   "keywords": [
     "markdown",

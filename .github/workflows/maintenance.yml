@@ -1,0 +1,118 @@
+name: Maintenance
+
+on:
+  schedule:
+    # Run weekly on Mondays at 9 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.x
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Check for security vulnerabilities
+      run: |
+        echo "🔍 Running security audit..."
+        npm audit --audit-level=moderate
+    
+    - name: Check for outdated dependencies
+      run: |
+        echo "📦 Checking for outdated dependencies..."
+        npm outdated || true
+    
+    - name: Generate dependency report
+      run: |
+        echo "📋 Generating dependency report..."
+        echo "## Dependency Status Report" > dependency-report.md
+        echo "" >> dependency-report.md
+        echo "Generated on: $(date)" >> dependency-report.md
+        echo "" >> dependency-report.md
+        echo "### Security Audit" >> dependency-report.md
+        echo "\`\`\`" >> dependency-report.md
+        npm audit || true >> dependency-report.md
+        echo "\`\`\`" >> dependency-report.md
+        echo "" >> dependency-report.md
+        echo "### Outdated Dependencies" >> dependency-report.md
+        echo "\`\`\`" >> dependency-report.md
+        npm outdated || true >> dependency-report.md
+        echo "\`\`\`" >> dependency-report.md
+    
+    - name: Upload dependency report
+      uses: actions/upload-artifact@v4
+      with:
+        name: dependency-report
+        path: dependency-report.md
+        retention-days: 30
+
+  health-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.x
+        cache: 'npm'
+    
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run comprehensive tests
+      run: npm run test:coverage
+    
+    - name: Test CLI functionality
+      run: |
+        echo "🧪 Testing CLI functionality..."
+        npm pack
+        npm install -g ./markdownforge-*.tgz
+        
+        # Create a test markdown file
+        echo "# Test Document" > test.md
+        echo "This is a test document for health check." >> test.md
+        echo "" >> test.md
+        echo "## Features" >> test.md
+        echo "- Feature 1" >> test.md
+        echo "- Feature 2" >> test.md
+        
+        # Test CLI commands
+        markdownforge --version
+        markdownforge --help
+        
+        echo "✅ CLI health check completed"
+    
+    - name: Check package integrity
+      run: |
+        echo "📦 Checking package integrity..."
+        npm pack --dry-run
+        echo "✅ Package integrity check completed"
+
+  cleanup:
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+    - name: Cleanup artifacts
+      run: |
+        echo "🧹 Maintenance workflow completed"
+        echo "📊 Check the Actions tab for detailed reports"
