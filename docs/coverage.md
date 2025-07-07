@@ -11,7 +11,9 @@ Our test suite covers multiple aspects of the application:
 - **End-to-End Tests** - Full CLI usage scenarios
 
 !!! info "Live Coverage Report"
-    The detailed, interactive coverage report is available at: [Coverage Report](https://rauofthameem.github.io/markdownforge/coverage-report/)
+    The detailed, interactive coverage report is available at: [Coverage Report](https://rauofthameem.github.io/markdownforge/coverage-report/ ':target=_blank')
+    
+    **Note**: This link opens the coverage report in a new tab, bypassing Docsify routing.
 
 ## 🎯 Coverage Goals
 
