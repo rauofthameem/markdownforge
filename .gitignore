@@ -121,8 +121,6 @@ coverage/
 # Generated files
 *.pdf
 *.docx
-*.png
-*.svg
 
 # Configuration files (keep examples)
 .fileconverterrc

@@ -32,7 +32,7 @@ The complete documentation site built with Docsify is automatically generated an
 - **Deployment Guide**: `https://rauofthameem.github.io/markdownforge/#/deployment`
 - **Contributing**: `https://rauofthameem.github.io/markdownforge/#/contributing`
 - **Test Coverage**: `https://rauofthameem.github.io/markdownforge/#/coverage`
-- **Coverage Report**: `https://rauofthameem.github.io/markdownforge/coverage-report/`
+- **Coverage Report**: `https://rauofthameem.github.io/markdownforge/coverage-report/` *(Direct link - bypasses Docsify routing)*
 
 ## Node.js Version Support
 ![Node.js](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen.svg)

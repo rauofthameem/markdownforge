@@ -18,7 +18,7 @@
 * **Resources**
   * [🏷️ Status Badges](badges.md)
   * [📊 Test Coverage](coverage.md)
-  * [📈 Coverage Report](coverage-report/)
+  * [📈 Coverage Report](https://rauofthameem.github.io/markdownforge/coverage-report/ ':target=_blank')
 
 * **Links**
   * [📦 NPM Package](https://www.npmjs.com/package/markdownforge)
