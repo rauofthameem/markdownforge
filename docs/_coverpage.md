@@ -23,8 +23,5 @@
 [GitHub](https://github.com/rauofthameem/markdownforge)
 [NPM](https://www.npmjs.com/package/markdownforge)
 
-<!-- background image -->
-![](https://raw.githubusercontent.com/rauofthameem/markdownforge/main/static/bg.svg)
-
 <!-- background color -->
 ![color](#f6f8fa)
