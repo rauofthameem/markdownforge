@@ -39,17 +39,17 @@
   "author": {
     "name": "Your Name",
     "email": "your.email@example.com",
-    "url": "https://github.com/yourusername"
+    "url": "https://github.com/rauofthameem"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/markdownforge.git"
+    "url": "git+https://github.com/rauofthameem/markdownforge.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/markdownforge/issues"
+    "url": "https://github.com/rauofthameem/markdownforge/issues"
   },
-  "homepage": "https://github.com/yourusername/markdownforge#readme",
+  "homepage": "https://github.com/rauofthameem/markdownforge#readme",
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=7.0.0"

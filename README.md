@@ -4,7 +4,7 @@ A powerful Node.js CLI tool for forging professional documents from Markdown fil
 
 [![npm version](https://badge.fury.io/js/markdownforge.svg)](https://badge.fury.io/js/markdownforge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js CI](https://github.com/yourusername/markdownforge/workflows/Node.js%20CI/badge.svg)](https://github.com/yourusername/markdownforge/actions)
+[![Node.js CI](https://github.com/rauofthameem/markdownforge/workflows/CI/badge.svg)](https://github.com/rauofthameem/markdownforge/actions)
 
 ## Features
 
@@ -428,7 +428,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/markdownforge.git
+git clone https://github.com/rauofthameem/markdownforge.git
 cd markdownforge
 
 # Install dependencies
@@ -472,9 +472,9 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Support
 
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/yourusername/markdownforge/issues)
-- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/yourusername/markdownforge/discussions)
-- 📚 **Documentation**: [Project Wiki](https://github.com/yourusername/markdownforge/wiki)
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/rauofthameem/markdownforge/issues)
+- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/rauofthameem/markdownforge/discussions)
+- 📚 **Documentation**: [Project Wiki](https://github.com/rauofthameem/markdownforge/wiki)
 - 💬 **Community**: [Discord Server](https://discord.gg/your-server)
 
 ## Acknowledgments

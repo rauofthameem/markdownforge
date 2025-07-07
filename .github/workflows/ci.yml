@@ -51,13 +51,17 @@ jobs:
         name: codecov-umbrella
         fail_ci_if_error: false
         
-    - name: Upload coverage artifact
+    - name: Prepare documentation site
+      if: github.ref == 'refs/heads/main' && matrix.node-version == '20.x'
+      run: ./scripts/prepare-docs.sh
+        
+    - name: Upload documentation site artifact
       if: github.ref == 'refs/heads/main' && matrix.node-version == '20.x'
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./coverage/lcov-report
+        path: ./docs
 
-  deploy-coverage:
+  deploy-docs:
     if: github.ref == 'refs/heads/main'
     needs: test
     runs-on: ubuntu-latest

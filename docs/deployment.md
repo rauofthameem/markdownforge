@@ -1,4 +1,4 @@
-# Deployment and NPM Publishing Strategy
+# MarkdownForge Deployment and NPM Publishing Strategy
 
 ## NPM Publishing Configuration
 
@@ -225,7 +225,7 @@ graph LR
 ```javascript
 // Optional anonymous usage tracking
 const trackUsage = async (command, options) => {
-  if (process.env.FILECONVERTER_ANALYTICS !== 'false') {
+  if (process.env.MARKDOWNFORGE_ANALYTICS !== 'false') {
     // Send anonymous usage data
     const payload = {
       command,
