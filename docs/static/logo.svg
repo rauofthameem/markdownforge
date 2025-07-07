@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <radialGradient id="mainGradient" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+    </radialGradient>
+    
+    <linearGradient id="centerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Main background circle with centered gradient -->
+  <circle cx="60" cy="60" r="56" fill="url(#mainGradient)" filter="url(#shadow)"/>
+  
+  <!-- Central transformation symbol -->
+  <g transform="translate(60,60)">
+    <!-- Hexagonal center piece -->
+    <path d="M -14 -8 L 0 -16 L 14 -8 L 14 8 L 0 16 L -14 8 Z" 
+          fill="url(#centerGradient)" stroke="#ffffff" stroke-width="2" filter="url(#glow)"/>
+    
+    <!-- Inner details -->
+    <circle r="6" fill="#ffffff" opacity="0.4"/>
+    <circle r="2.5" fill="#ffffff"/>
+  </g>
+  
+  <!-- Input section with enhanced background -->
+  <g transform="translate(22,60)">
+    <rect x="-12" y="-4.5" width="24" height="9" rx="3" fill="#ffffff" opacity="0.98" stroke="#4f46e5" stroke-width="0.5"/>
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif"
+          font-size="10" font-weight="800" fill="#4f46e5" text-anchor="middle" dominant-baseline="central">MD</text>
+  </g>
+  
+  <!-- Arrow FROM MD TO center (input arrow) -->
+  <g opacity="0.9">
+    <path d="M 35 60 L 45 60" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <path d="M 41 57 L 45 60 L 41 63 Z" fill="#ffffff"/>
+  </g>
+  
+  <!-- Arrow FROM center TO PDF -->
+  <g opacity="0.9">
+    <path d="M 74 55 L 84 55" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <path d="M 80 52 L 84 55 L 80 58 Z" fill="#ffffff"/>
+  </g>
+  
+  <!-- Arrow FROM center TO DOCX -->
+  <g opacity="0.9">
+    <path d="M 74 67 L 84 67" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <path d="M 80 64 L 84 67 L 80 70 Z" fill="#ffffff"/>
+  </g>
+  
+  <!-- Output labels with enhanced backgrounds -->
+  <g transform="translate(98,55)">
+    <rect x="-14" y="-4" width="28" height="8" rx="3" fill="#dc2626" opacity="0.98" stroke="#ffffff" stroke-width="0.5"/>
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif"
+          font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">PDF</text>
+  </g>
+  
+  <g transform="translate(98,67)">
+    <rect x="-14" y="-4" width="28" height="8" rx="3" fill="#2563eb" opacity="0.98" stroke="#ffffff" stroke-width="0.5"/>
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif"
+          font-size="8" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">DOCX</text>
+  </g>
+</svg>

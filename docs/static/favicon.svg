@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main circle -->
+  <circle cx="16" cy="16" r="14" fill="url(#grad)"/>
+  
+  <!-- Central hexagon -->
+  <path d="M 12 14 L 16 11 L 20 14 L 20 18 L 16 21 L 12 18 Z" 
+        fill="url(#centerGrad)" stroke="#ffffff" stroke-width="0.5"/>
+  
+  <!-- Center dot -->
+  <circle cx="16" cy="16" r="2" fill="#ffffff"/>
+  
+  <!-- Simple flow indicators -->
+  <rect x="6" y="15" width="4" height="2" rx="1" fill="#ffffff" opacity="0.8"/>
+  <path d="M 22 15 L 26 16 L 22 17 Z" fill="#ffffff" opacity="0.8"/>
+</svg>
