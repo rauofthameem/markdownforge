@@ -1,4 +1,4 @@
-# File Converter CLI Architecture
+# MarkdownForge Architecture
 
 ## System Overview
 
@@ -40,7 +40,7 @@ graph TD
 - Progress indicators
 
 **Files:**
-- `bin/fileconverter.js` - Executable entry point
+- `bin/markdownforge.js` - Executable entry point
 - `src/cli/commander.js` - Command definitions and parsing
 - `src/cli/help.js` - Help system and usage documentation
 
@@ -121,7 +121,7 @@ sequenceDiagram
     participant Converters
     participant FileSystem
     
-    User->>CLI: npx fileconverter input.md
+    User->>CLI: npx markdownforge input.md
     CLI->>CLI: Parse arguments
     CLI->>Processor: Initialize conversion
     
@@ -137,36 +137,27 @@ sequenceDiagram
 ## NPM Package Structure
 
 ```
-fileconverter/
+markdownforge/
 ├── bin/
 │   └── fileconverter.js           # Executable entry point
 ├── src/
-│   ├── cli/
-│   │   ├── commander.js           # CLI command definitions
-│   │   └── help.js                # Help system
+│   ├── index.js                   # Main entry point
 │   ├── core/
 │   │   ├── documentProcessor.js   # Main orchestrator
-│   │   ├── conversionPipeline.js  # Workflow management
 │   │   └── tempFileManager.js     # Temp file handling
 │   ├── validators/
-│   │   ├── fileValidator.js       # Input validation
-│   │   └── configValidator.js     # Config validation
+│   │   └── fileValidator.js       # Input validation
 │   ├── renderers/
-│   │   ├── mermaidRenderer.js     # Mermaid processing
-│   │   ├── diagramExtractor.js    # Diagram extraction
-│   │   └── puppeteerManager.js    # Browser management
+│   │   └── mermaidRenderer.js     # Mermaid processing
 │   ├── converters/
 │   │   ├── docxConverter.js       # DOCX conversion
-│   │   ├── pdfConverter.js        # PDF conversion
-│   │   └── htmlConverter.js       # HTML conversion
+│   │   └── pdfConverter.js        # PDF conversion
 │   ├── output/
-│   │   ├── outputManager.js       # Output management
-│   │   ├── cleanupManager.js      # Cleanup utilities
-│   │   └── reportGenerator.js     # Conversion reports
+│   │   └── outputManager.js       # Output management
 │   └── utils/
-│       ├── fileUtils.js           # File utilities
-│       ├── logger.js              # Logging system
-│       └── constants.js           # Application constants
+│       ├── configLoader.js        # Configuration management
+│       ├── errors.js              # Error handling
+│       └── logger.js              # Logging system
 ├── tests/
 │   ├── unit/                      # Unit tests
 │   ├── integration/               # Integration tests
@@ -252,7 +243,7 @@ fileconverter/
 
 ### 1. Configuration Sources
 - Command-line arguments (highest priority)
-- Configuration files (`.fileconverterrc`)
+- Configuration files (`.markdownforgerc`)
 - Environment variables
 - Default values (lowest priority)
 

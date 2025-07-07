@@ -1,17 +1,17 @@
-# File Converter CLI API Specification
+# MarkdownForge API Specification
 
 ## Command Line Interface
 
 ### Basic Usage
 ```bash
-npx fileconverter <input-file> [options]
+npx markdownforge <input-file> [options]
 ```
 
 ### Commands
 
 #### Convert Command (Default)
 ```bash
-npx fileconverter input.md --format pdf,docx --output ./output
+npx markdownforge input.md --format pdf,docx --output ./output
 ```
 
 **Arguments:**
@@ -30,16 +30,16 @@ npx fileconverter input.md --format pdf,docx --output ./output
 #### Examples
 ```bash
 # Basic conversion to both PDF and DOCX
-npx fileconverter document.md
+npx markdownforge document.md
 
 # Convert to PDF only with custom output
-npx fileconverter document.md --format pdf --output ./exports
+npx markdownforge document.md --format pdf --output ./exports
 
 # Convert with custom theme and verbose output
-npx fileconverter document.md --theme github --verbose
+npx markdownforge document.md --theme github --verbose
 
 # Convert with custom name
-npx fileconverter document.md --name "final-report"
+npx markdownforge document.md --name "final-report"
 ```
 
 ## Core API Components
@@ -160,7 +160,7 @@ class PDFConverter {
 
 ## Configuration Schema
 
-### CLI Configuration File (`.fileconverterrc`)
+### CLI Configuration File (`.markdownforgerc`)
 
 ```json
 {
@@ -260,10 +260,10 @@ class PDFConverter {
 ### Error Types
 
 ```javascript
-class FileConverterError extends Error {
+class MarkdownForgeError extends Error {
     constructor(message, code, details = {}) {
         super(message);
-        this.name = 'FileConverterError';
+        this.name = 'MarkdownForgeError';
         this.code = code;
         this.details = details;
     }
@@ -365,7 +365,7 @@ const testUtils = {
 ### Integration Test Framework
 
 ```javascript
-describe('FileConverter Integration Tests', () => {
+describe('MarkdownForge Integration Tests', () => {
     test('converts markdown with mermaid diagrams to PDF', async () => {
         const processor = new DocumentProcessor({
             format: ['pdf'],

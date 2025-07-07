@@ -99,9 +99,9 @@ sequenceDiagram
 
 ## Links and References
 
-- [Project Repository](https://github.com/yourusername/fileconverter-cli)
-- [NPM Package](https://www.npmjs.com/package/fileconverter-cli)
-- [Documentation](https://github.com/yourusername/fileconverter-cli/wiki)
+- [Project Repository](https://github.com/rauofthameem/markdownforge)
+- [NPM Package](https://www.npmjs.com/package/markdownforge)
+- [Documentation](https://github.com/rauofthameem/markdownforge/wiki)
 
 ## Conclusion
 

@@ -3,14 +3,36 @@
 Add these badges to your README.md file:
 
 ## CI/CD Status
-![CI](https://github.com/yourusername/markdownforge/workflows/CI/badge.svg)
+![CI](https://github.com/rauofthameem/markdownforge/workflows/CI/badge.svg)
 
 ## Code Coverage
-[![codecov](https://codecov.io/gh/yourusername/markdownforge/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/markdownforge)
+[![codecov](https://codecov.io/gh/rauofthameem/markdownforge/branch/main/graph/badge.svg)](https://codecov.io/gh/rauofthameem/markdownforge)
 
-## Test Coverage Report
-The test coverage report is automatically generated and published to GitHub Pages at:
-`https://yourusername.github.io/markdownforge/coverage/`
+## GitHub Pages Documentation Site
+The complete documentation site built with Docsify is automatically generated and published to GitHub Pages at:
+`https://rauofthameem.github.io/markdownforge/`
+
+### Documentation Features:
+- **📱 Responsive Design** - Works on all devices
+- **🔍 Full-Text Search** - Search across all documentation
+- **🎨 Dark/Light Theme** - Automatic theme switching
+- **📝 Edit Links** - Direct links to edit pages on GitHub
+- **🧭 Smart Navigation** - Sidebar with progress tracking
+- **📊 Mermaid Diagrams** - Interactive diagram support
+- **💾 Copy Code** - One-click code copying
+- **🔗 Deep Linking** - Direct links to sections
+
+### Documentation Sections:
+- **Main Documentation**: `https://rauofthameem.github.io/markdownforge/#/`
+- **Installation Guide**: `https://rauofthameem.github.io/markdownforge/#/installation`
+- **Quick Start**: `https://rauofthameem.github.io/markdownforge/#/quickstart`
+- **API Documentation**: `https://rauofthameem.github.io/markdownforge/#/api`
+- **Architecture Guide**: `https://rauofthameem.github.io/markdownforge/#/architecture`
+- **Configuration**: `https://rauofthameem.github.io/markdownforge/#/configuration`
+- **Deployment Guide**: `https://rauofthameem.github.io/markdownforge/#/deployment`
+- **Contributing**: `https://rauofthameem.github.io/markdownforge/#/contributing`
+- **Test Coverage**: `https://rauofthameem.github.io/markdownforge/#/coverage`
+- **Coverage Report**: `https://rauofthameem.github.io/markdownforge/coverage-report/`
 
 ## Node.js Version Support
 ![Node.js](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen.svg)
@@ -26,8 +48,8 @@ The test coverage report is automatically generated and published to GitHub Page
 ```markdown
 # MarkdownForge
 
-![CI](https://github.com/yourusername/markdownforge/workflows/CI/badge.svg)
-[![codecov](https://codecov.io/gh/yourusername/markdownforge/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/markdownforge)
+![CI](https://github.com/rauofthameem/markdownforge/workflows/CI/badge.svg)
+[![codecov](https://codecov.io/gh/rauofthameem/markdownforge/branch/main/graph/badge.svg)](https://codecov.io/gh/rauofthameem/markdownforge)
 ![Node.js](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
@@ -35,12 +57,12 @@ Forge professional documents from Markdown with DOCX and PDF support, including 
 
 ## Test Coverage
 
-View the detailed test coverage report at: [Coverage Report](https://yourusername.github.io/markdownforge/coverage/)
+View the complete documentation site at: [MarkdownForge Documentation](https://rauofthameem.github.io/markdownforge/)
 ```
 
 ## Setup Instructions
 
-1. Replace `yourusername` with your actual GitHub username in all URLs
+1. All GitHub URLs have been updated with the correct username `rauofthameem`
 2. Enable GitHub Pages in your repository settings
 3. Set the source to "GitHub Actions" 
 4. The coverage report will be automatically updated on each push to main branch

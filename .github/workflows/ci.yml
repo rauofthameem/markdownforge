@@ -47,10 +47,27 @@ jobs:
         name: codecov-umbrella
         fail_ci_if_error: false
         
-    - name: Upload coverage reports to GitHub Pages
+    - name: Prepare documentation site
       if: github.ref == 'refs/heads/main' && matrix.node-version == '20.x'
-      uses: peaceiris/actions-gh-pages@v3
+      run: ./scripts/prepare-docs.sh
+        
+    - name: Upload documentation site artifact
+      if: github.ref == 'refs/heads/main' && matrix.node-version == '20.x'
+      uses: actions/upload-pages-artifact@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./coverage/lcov-report
-        destination_dir: coverage
+        path: ./docs
+
+  deploy-docs:
+    if: github.ref == 'refs/heads/main'
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
