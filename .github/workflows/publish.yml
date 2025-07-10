@@ -8,6 +8,10 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
     
     steps:
     - name: Checkout code
@@ -85,15 +89,14 @@ jobs:
         fi
     
     - name: Create GitHub Release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v2
       with:
-        tag_name: ${{ github.ref }}
-        release_name: MarkdownForge v${{ steps.get_version.outputs.VERSION }}
+        tag_name: v${{ steps.get_version.outputs.VERSION }}
+        name: MarkdownForge v${{ steps.get_version.outputs.VERSION }}
         body: ${{ steps.changelog.outputs.CHANGELOG }}
         draft: false
         prerelease: ${{ contains(steps.get_version.outputs.VERSION, '-') }}
+        generate_release_notes: true
     
     - name: Notify success
       run: |
