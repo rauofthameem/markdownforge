@@ -1,0 +1,123 @@
+# Development and testing files
+tests/
+*.test.js
+*.spec.js
+coverage/
+.nyc_output
+test-output/
+
+# Development configuration
+.eslintrc*
+.eslintcache
+eslint.config.js
+.prettierrc*
+jest.config.js
+.babelrc*
+tsconfig.json
+
+# Build and CI/CD files
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Development dependencies and caches
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment and configuration
+.env*
+.local
+.cache
+.parcel-cache
+
+# Temporary and output files
+tmp/
+temp/
+*.tmp
+output/
+dist/
+build/
+logs/
+*.log
+
+# Generated documentation files (keep essential docs)
+docs/coverage.md
+docs/deployment.md
+docs/contributing.md
+docs/static/
+
+# Development plans and internal docs
+plans/
+releases/
+.markdownlint*
+.editorconfig
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# Examples and static assets (optional - remove if not needed for users)
+examples/
+static/
+
+# Roo AI assistant files
+.roo*
+
+# Test fixtures and sample outputs
+*.pdf
+*.docx
+sample-*
+test-*
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Development scripts that aren't needed for end users
+scripts/prepare-docs.sh
+scripts/prepare-release.js
+
+# Linting and formatting configs
+.eslintignore
+.prettierignore
+
+# Coverage reports
+*.lcov
+coverage.json
+
+# Puppeteer downloads
+.local-chromium/
+
+# NPM package files
+*.tgz

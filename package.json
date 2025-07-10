@@ -95,8 +95,7 @@
   "files": [
     "bin/",
     "src/",
-    "docs/",
-    "scripts/",
+    "scripts/check-dependencies.js",
     "README.md",
     "LICENSE",
     ".markdownforgerc.example"
