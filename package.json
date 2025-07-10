@@ -55,7 +55,7 @@
   "bugs": {
     "url": "https://github.com/rauofthameem/markdownforge/issues"
   },
-  "homepage": "https://github.com/rauofthameem/markdownforge#readme",
+  "homepage": "https://rauofthameem.github.io/markdownforge/",
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=7.0.0"
